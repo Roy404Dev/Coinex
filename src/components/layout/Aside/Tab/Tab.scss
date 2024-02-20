@@ -1,0 +1,18 @@
+.aside-column-tabs {
+  margin-top: 5em;
+  .aside-column-tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.375em 2.31em;
+    width: 100%;
+    cursor: pointer;
+  }
+}
+
+.aside-column-tab-selected {
+  background-color: #2a2b31;
+  img {
+    filter: brightness(0) invert(1);
+  }
+}

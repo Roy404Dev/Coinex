@@ -1,0 +1,53 @@
+@use "../../../sass/abstracts/colors";
+
+.coin-element {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: colors.$bg-450;
+  padding: 0.56em 0.81em 0.81em 0.875em;
+  row-gap: 1em;
+  column-gap: 2em;
+  border-radius: 0.125em;
+  & > img {
+    justify-self: end;
+    min-width: 2em;
+  }
+  .coin-element__coin-name {
+    color: colors.$text-white;
+    font-weight: 300;
+    text-transform: capitalize;
+    font-size: 1rem;
+    align-self: center;
+  }
+  .coin-element__coin-amount {
+    color: colors.$text-white;
+    font-weight: 300;
+    font-size: 1.5rem;
+  }
+  .coin-short-name {
+    color: colors.$text-clr-3A3C43;
+    font-weight: 500;
+  }
+}
+
+.coin-element-selected {
+  background-color: colors.$limeGreen;
+}
+
+@media screen and (min-width: 768px) {
+  .coin-element {
+    padding: 1.31em 1em;
+    transition: 200ms ease-out;
+    .coin-element__coin-amount {
+      display: none;
+    }
+  }
+  .coin-element-selected {
+    padding: 1.31em 1em;
+    transition: 250ms ease-out;
+    column-gap: 2.5em;
+    .coin-element__coin-amount {
+      display: block;
+    }
+  }
+}

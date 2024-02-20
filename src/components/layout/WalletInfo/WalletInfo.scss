@@ -1,0 +1,59 @@
+@use "../../../sass/abstracts/colors";
+
+.dashboard-wallet-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: colors.$text-white;
+  padding: 2em 1.25em;
+  row-gap: 2em;
+  background-color: colors.$bg-300;
+  .dashboard-wallet-info__transactions {
+    & > span {
+      display: block;
+    }
+    .transactions-count {
+      font-size: 2.125rem;
+      line-height: 1.5;
+    }
+  }
+  .dashboard-wallet-info__wallets {
+    display: grid;
+    text-align: center;
+    .dashboard-wallet-info__wallets__wrapper {
+      padding: 0.1em 0.725em 0.7em 0.725em;
+      justify-self: flex-end;
+      & > span {
+        display: block;
+      }
+      background-color: colors.$bg-400;
+      .dashboard-wallet-info__wallets__wallet-amount {
+        font-size: 2.125rem;
+      }
+      .dashboard-wallet-info-title {
+        font-size: 1rem;
+      }
+    }
+  }
+  .dashboard-wallet-info__gained {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-column: 1 / 3;
+  }
+  .dashboard-wallet-info__currentBalance {
+    display: flex;
+    flex-direction: column;
+    .balance-amount {
+      font-size: 3rem;
+    }
+  }
+  .dashboard-transactions-title {
+    font-size: 0.75rem;
+    color: colors.$text-clr-42434B;
+  }
+  .dashboard-current-balance-title {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: colors.$text-clr-606166;
+  }
+}

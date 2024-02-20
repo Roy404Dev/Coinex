@@ -1,0 +1,13 @@
+.DashboardLayout {
+  display: flex;
+  background-color: #18191d;
+  min-height: 100vh;
+  height: 100%;
+
+}
+
+@media screen and (max-width: 768px) {
+  .DashboardLayout {
+    display: block;
+  }
+}

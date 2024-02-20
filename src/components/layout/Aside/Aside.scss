@@ -1,0 +1,22 @@
+@use "../../../sass/abstracts/colors";
+.aside {
+  display: none;
+  background-color: colors.$bg-450;
+  .aside-column {
+    // padding: 2.125em 2em;
+    .aside-logo {
+      margin: 2.125em 2em;
+      min-width: 1.625em;
+    }
+
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .aside {
+    display: grid;
+    .aside-column {
+      position: sticky;
+    }
+  }
+}

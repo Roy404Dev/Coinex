@@ -1,0 +1,11 @@
+.wallet-percentages {
+  .wallet-percentages-wrapper {
+    .wallet-coin-percentage:nth-child(1) {
+      border-radius: 0.25em 0.25em 0 0;
+    }
+    .wallet-coin-percentage:last-child {
+      border-radius: 0 0 0.25em 0.25em;
+      padding-bottom: 1.25em;
+    }
+  }
+}

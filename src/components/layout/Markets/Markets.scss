@@ -1,0 +1,32 @@
+@use "../../../sass/abstracts/colors";
+
+.markets {
+  background-color: colors.$bg-300;
+  padding: 1.31em 1em;
+  border-radius: 0.125em;
+  overflow-x: auto;
+  .markets-header {
+    display: flex;
+    justify-content: space-between;
+    .markets-selection-list {
+      display: flex;
+      gap: 0.5em;
+      .markets-select-el {
+        .markets-select-btn {
+          color: colors.$text-clr-606166;
+          font-weight: 500;
+          font-size: 0.8125rem;
+        }
+        .markets-select-btn-selected {
+          color: colors.$text-white;
+        }
+      }
+    }
+    .section-title {
+      color: colors.$text-white;
+      font-weight: 500;
+      font-size: 1.2rem;
+    }
+    margin-bottom: 2em;
+  } 
+}

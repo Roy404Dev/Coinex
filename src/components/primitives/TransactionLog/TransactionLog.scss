@@ -1,0 +1,29 @@
+@use "../../../sass/abstracts/colors";
+.transaction-log {
+  display: flex;
+  flex-direction: column;
+  background-color: colors.$bg-300;
+  padding: 0.75em;
+  border-radius: .125em;
+  .transaction-log-top {
+    display: flex;
+    justify-content: space-between;
+    .transaction-log-date {
+      color: colors.$text-white;
+    }
+    .transaction-log-recieved,
+    .transaction-log-sent {
+      display: flex;
+      align-items: center;
+      gap: 0.3125em;
+      color: colors.$text-white;
+    }
+  }
+  .transaction-log-bottom {
+    display: flex;
+    .transaction-hash {
+      font-size: 0.75rem;
+      color: colors.$text-clr-42434B;
+    }
+  }
+}

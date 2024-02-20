@@ -1,0 +1,190 @@
+@use "@/sass/abstracts/colors.scss";
+.signup-page {
+  min-height: 100vh;
+  height: 100%;
+
+  background-image: url("images/whiteBackgroundImg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .signup-page-wrapper {
+    flex-grow: 1;
+    width: min(1280px, 100% - 4em);
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-top: 4em;
+    justify-content: space-between;
+    .signup-page-wrapper-top {
+      display: grid;
+      row-gap: 2em;
+      .signup-page-heading {
+        font-size: clamp(1.875rem, 4vw, 2.5rem);
+        color: colors.$text-primary-dark;
+        font-weight: 300;
+        margin-bottom: 0.5em;
+      }
+      .side-line {
+        display: block;
+        position: absolute;
+        left: 0;
+        height: 1px;
+        margin: 3em 0;
+        width: 4.375em;
+        transform: translateY(1.25em);
+        border-top: 3px solid #000000;
+      }
+      .signup-page-form-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .testimonial {
+          display: none;
+          text-align: end;
+          .testimonial-primary {
+            font-weight: 300;
+            font-size: 2.625rem;
+          }
+          .testimonial-secondary {
+            font-size: 1.375rem;
+            color: colors.$text-testimonial-light-grey;
+            font-weight: 300;
+          }
+        }
+        .signup-page-paragraph {
+          font-size: 0.75em;
+          max-width: 11.25em;
+          margin: 4.375em 0 5.625em 0;
+        }
+        .signup-page-form {
+          display: grid;
+          column-gap: 0.8125em;
+          grid-template-columns: 1fr 60%;
+          & > input {
+            width: 100%;
+            border: 1px solid colors.$primary-btn-dark-background-color;
+            border-radius: 0.25em;
+            padding: 0.825em;
+            align-items: flex-start;
+            background-color: white;
+            &::placeholder {
+              font-weight: 500;
+              color: colors.$text-primary-dark;
+              text-transform: uppercase;
+              font-size: clamp(0.3rem, 4vw, 0.625rem);
+              padding-left: 1em;
+            }
+          }
+          .passwordInput {
+            grid-column: 1 / 3;
+            margin-top: 0.8125em;
+          }
+          .createAccountBtn {
+            background-color: colors.$primary-btn-dark-background-color;
+            grid-row: 3 / 4;
+            grid-column: 1 / 3;
+            margin-top: 3em;
+          }
+        }
+      }
+
+      .log-in-message {
+        font-size: 0.75rem;
+        color: colors.$text-clr-dark-grey;
+        font-weight: 400;
+        #linkType-login {
+          color: colors.$text-primary-dark;
+          font-weight: 500;
+        }
+      }
+    }
+    .signup-page-footer {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      margin-top: 2.5em;
+      .signup-page-socials {
+        display: none;
+      }
+      .signup-page-footer-elements {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+        .signup-page-footer-element {
+          & > span {
+            font-size: 0.75rem;
+            color: colors.$text-clr-light-grey;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+  .main-header {
+    .main-header-right-side {
+      //Remove login and signup buttons
+      .signin-btn,
+      .login-btn {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .signup-page {
+    display: flex;
+    flex-direction: column;
+    .main-header {
+      .main-header-wrapper {
+        .header-widget-hamburger-menu {
+          display: none;
+        }
+        .main-header-right-side {
+          & > a {
+            display: none;
+          }
+        }
+      }
+    }
+    .signup-page-wrapper {
+      flex-grow: 1;
+      .signup-page-wrapper-top {
+        padding-left: 6.25em;
+        .side-line {
+          display: none;
+        }
+        .signup-page-paragraph {
+          display: none;
+        }
+        .signup-page-form-wrapper {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          justify-content: space-between;
+          .testimonial {
+            display: block;
+          }
+        }
+      }
+      //====Form====
+      .signup-page-form {
+        .createAccountBtn {
+          width: 55%;
+        }
+      }
+      //====Footer====
+      .signup-page-footer {
+        margin-bottom: 2.5em;
+        display: flex;
+        justify-content: space-between;
+        .signup-page-socials {
+          display: flex;
+          gap: 2em;
+        }
+      }
+    }
+  }
+}

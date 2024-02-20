@@ -1,0 +1,45 @@
+.page-footer {
+  background-color: black;
+  .page-footer-wrapper {
+    width: min(1280px, 100% - 4em);
+    margin: 0 auto;
+    padding-top: 2.68em;
+    text-align: center;
+    display: grid;
+    row-gap: 3.18em;
+    .services-list {
+      display: flex;
+      gap: 2em;
+      overflow-x: auto;
+      justify-content: center;
+      white-space: nowrap;
+      .service {
+        font-size: 0.6875rem;
+        color: #606166;
+        font-weight: 600;
+        cursor: pointer;
+      }
+    }
+    .logos-list {
+      display: flex;
+      justify-content: center;
+
+      gap: 2em;
+    }
+    .footer-legal-information {
+      display: flex;
+      gap: 2em;
+      color: white;
+      font-size: 0.75rem;
+      justify-content: center;
+    }
+  }
+  .copyrights-banner {
+    background-color: #2a2b31;
+    color: #535355;
+    font-size: 0.75rem;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 3.625em;
+  }
+}

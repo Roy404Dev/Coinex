@@ -1,0 +1,10 @@
+@use "../../../sass/abstracts/colors";
+.coin-preview {
+  overflow: hidden;
+  background-color: colors.$bg-450;
+  padding: 1em;
+  border-radius: .125em;
+  height: 35vh;
+  max-width: 100vw;
+  width: 100%;
+}

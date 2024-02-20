@@ -1,0 +1,100 @@
+@use "../../sass/abstracts/colors";
+.main-header {
+  .bg-color-light {
+    background-color: white;
+  }
+  .bg-color-dark {
+    background-color: black;
+  }
+  .main-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: min(1280px, 100% - 4em);
+    padding: 1.875em 0;
+    margin: 0 auto;
+
+    .main-header-logo {
+      font-size: 1.375rem;
+      font-weight: 400;
+    }
+
+    .main-header-right-side {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1em;
+
+      .signin-btn,
+      .login-btn {
+        display: none;
+      }
+
+      .header-widget-hamburger-menu {
+        border: none;
+        cursor: pointer;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        align-self: center;
+        gap: 0.28em;
+        margin-left: 1.75em;
+        .bar {
+          content: "";
+          height: 1.5px;
+        }
+        .bar:nth-child(1) {
+          width: 24.6px;
+        }
+        .bar:nth-child(2) {
+          width: 36.6px;
+        }
+        .bar:nth-child(3) {
+          width: 8.6px;
+        }
+      }
+    }
+  }
+
+  //====THEMES====
+  .color-theme-light {
+    .header-widget-hamburger-menu {
+      .bar {
+        background-color: colors.$header-theme-light-clr;
+      }
+    }
+    .main-header-logo {
+      color: colors.$header-theme-light-clr;
+    }
+  }
+  .color-theme-dark {
+    .header-widget-hamburger-menu {
+      .bar {
+        background-color: colors.$header-theme-dark-clr;
+      }
+    }
+  }
+
+  .main-header-logo {
+    color: colors.$header-theme-dark-clr;
+  }
+}
+.bg-color-dark {
+  background-color: black;
+}
+.bg-color-light {
+  background-color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .main-header {
+    .main-header-wrapper {
+      .main-header-right-side {
+        .signin-btn,
+        .login-btn {
+          display: block;
+        }
+      }
+    }
+  }
+}

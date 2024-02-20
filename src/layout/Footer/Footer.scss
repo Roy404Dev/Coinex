@@ -1,0 +1,23 @@
+@use '../../sass/abstracts/colors';
+.login-page-footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top: 2.5em;
+  .login-page-socials {
+    display: none;
+  }
+  .login-page-footer-elements {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    .login-page-footer-element {
+      & > span {
+        font-size: 0.75rem;
+        color: colors.$text-clr-light-grey;
+        font-weight: 400;
+      }
+    }
+  }
+}

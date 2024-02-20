@@ -1,0 +1,28 @@
+@use "../../../sass/abstracts/colors";
+.wallet-coin-percentage {
+  display: flex;
+  align-items: center;
+  background-color: colors.$bg-1E2025;
+  padding: 1.25em 1.25em 0 1.25em;
+  .wallet-coin-percentage__left {
+    display: flex;
+    gap: 1.875em;
+    width: 100%;
+    .wallet-coin-percent {
+      font-size: 1.5rem;
+      color: colors.$text-white;
+    }
+  }
+  .wallet-coin-percentage__right {
+    width: 100%;
+    display: flex;
+    padding-left: 2em;
+    justify-content: space-between;
+    .wallet-coin-name {
+      color: colors.$text-clr-606166;
+      font-size: 1rem;
+      font-weight: 500;
+      text-transform: capitalize;
+    }
+  }
+}

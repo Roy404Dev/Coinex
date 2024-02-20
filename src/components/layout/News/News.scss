@@ -1,0 +1,20 @@
+@use "../../../sass/abstracts/colors";
+
+.news-section {
+  display: grid;
+  gap: .5em;
+  background-color: colors.$bg-450;
+  padding: 0.5em 1em;
+  .section-title {
+    font-size: 1rem;
+    color: colors.$text-white;
+    font-weight: 500;
+  }
+  .news-paragraph {
+    font-size: 0.875rem;
+    color: colors.$text-white;
+  }
+  .news-date {
+    color: colors.$text-clr-4C4D55
+  }
+}

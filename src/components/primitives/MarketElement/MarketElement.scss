@@ -1,0 +1,32 @@
+@use "../../../sass/abstracts/colors";
+.marketElement {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid colors.$border-primary;
+  padding: 1.1875em 0 0.75em 0;
+  .marketElement-left {
+    .marketElement-info-row {
+      display: flex;
+      gap: 1.375em;
+      .marketElement-info-currency {
+        color: colors.$text-clr-606166;
+        font-weight: 600;
+        font-size: 0.7rem;
+      }
+      .marketElement-info-growth {
+        color: colors.$text-clr-4C4D55;
+        font-size: 0.7rem;
+      }
+    }
+    .marketElement-info-coinPrice {
+      display: flex;
+      gap: .5em;
+      font-weight: 500;
+      color: colors.$text-white;
+      font-size: 0.875rem;
+      .info-coin-currency {
+        font-weight: 300;
+      }
+    }
+  }
+}

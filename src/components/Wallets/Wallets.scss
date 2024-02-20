@@ -1,0 +1,48 @@
+@use "../../sass/abstracts/colors";
+.wallets {
+  .wallets-wrapper {
+    display: grid;
+    grid-template-columns: auto;
+    .wallets-top {
+      display: flex;
+      justify-content: space-between;
+      & > span {
+        color: colors.$text-white;
+        font-size: 1rem;
+      }
+    }
+    .wallet-coins {
+      margin-top: 1.125em;
+      display: flex;
+      gap: 1.25em;
+      cursor: grab;
+      overflow-x: auto;
+      &::-webkit-scrollbar {
+        height: 0.3em;
+      }
+
+      &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: colors.$limeGreen;
+        border-radius: 0.5em;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .wallets {
+    .wallets-wrapper {
+      .wallets-top {
+        display: none;
+      }
+      .wallet-coins {
+        margin-top: 0;
+        padding-bottom: 1em;
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@use '../../../sass/abstracts/colors';
+.transactions {
+  background-color: colors.$bg-450;
+  padding: 1.1875em;
+  border-radius: .125em;
+  overflow-y: auto;
+  overflow-x: hidden;
+  .transactions-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.81em;
+    .section-title {
+      color: colors.$text-white;
+      font-weight: 400;
+      font-size: 1.2rem;
+    }
+    .transactions-filter-methods {
+      display: flex;
+      gap: 0.59em;
+      align-items: center;
+      .transactions-filter-method {
+        button {
+          color: colors.$text-clr-606166;
+          font-size: 0.8rem;
+        }
+        .filter-all-btn-selected {
+          color: colors.$text-white;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  .transactions-list {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+  }
+}
